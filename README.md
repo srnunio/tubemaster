@@ -1,6 +1,6 @@
 # Tube Master Mobile
 
-<img src="images/youtube.svg" width="80" height="80">
+<img src="/images/youtube.svg" width="80" height="80">
 
 ## Downloader de videos e audios do YouTube.
 
