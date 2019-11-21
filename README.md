@@ -1,6 +1,6 @@
 # Tube Master Mobile
 
-![Scheme](/images/youtube.svg =80x) 
+![Scheme](/images/youtube.svg width="80" height="80") 
 
 ## Downloader de videos e audios do YouTube.
 
