@@ -1,0 +1,39 @@
+{
+
+
+  "Monday": "Segunda feira",
+  "Tuesday": "Terça feira",
+  "Wednesday": "Quarta feira",
+  "Thursday": "Quinta feira",
+  "Friday": "Sexta feira",
+  "Saturday": "Sábado",
+  "Sunday": "Domingo",
+  "items": "Itens",
+  "save": "Salvar",
+  "yes": "Sim",
+  "no": "Não",
+  "delete": "Eliminar",
+  "deleted": "Eliminado",
+
+  "message_delete_error_anotation":"Falha ao eliminar",
+  "error_update": "Falha ao actualizar",
+  "detail": "Detalhes",
+  "mode_dark_true": "Activar modo escuro",
+  "mode_dark_false": "Desactivar modo escuro",
+  "update": "Actualizar",
+  "copy_test": "Texto copiado",
+  "rename": "Renomear",
+  "options": "Opções",
+  "language": "Idiomas",
+  "portuguese": "Português",
+  "english": "Inglês",
+  "spanish": "Espanhol",
+  "cancel": "Cancelar"
+
+
+
+
+
+
+
+}
