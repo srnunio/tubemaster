@@ -1,4 +1,0 @@
-#Wed Nov 13 04:00:36 WAT 2019
-base.0=/Users/edvaldo/Projects/tubemaster/build/app/intermediates/transforms/dexMerger/release/0
-path.0=classes.dex
-renamed.0=classes.dex
