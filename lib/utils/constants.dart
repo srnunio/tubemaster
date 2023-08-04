@@ -1,5 +1,5 @@
 class Vars {
-  static const KEY_API = "AIzaSyCaP-NwGuO4H9u1Y1Ly5g8b34YROBrhSII";
+  static const KEY_API = "your-youtube-api-token";
   static const DB_NAME_FILE = 'tasks.db';
   static const DB_TASKS_TABLE_NAME = 'tasks';
   static const LINKED_TUBE_VIDEO = 'https://youtu.be/';
@@ -20,14 +20,5 @@ class Vars {
         "date"	VARCHAR(80) NOT NULL,   
         "progress"	INTEGER NOT NULL,
         "stateFile"	INTEGER NOT NULL
-    )''';
-
-//  static const SCRIPT_CONTENT = '''CREATE TABLE $DB_ANOTATION_TABLE_CONTENT (
-//        "id"	INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
-//        "value"	TEXT NOT NULL,
-//        "createdAt"	INTEGER NOT NULL,
-//        "modifiedAt"	INTEGER NOT NULL,
-//        "id_anotation"	INTEGER NOT NULL,
-//        FOREIGN KEY("id_anotation") REFERENCES "anotation"("id_anotation")
-//)''';
+    )'''; 
 }
