@@ -1,6 +1,6 @@
 # Tube Master Mobile
 
-![Scheme](/images/youtube.svg width="80" height="80") 
+**Note**: One of my first projects with flutter, so if you're seeing this project in 2023 know that a lot here is wrong and discontinued
 
 ## Downloader de videos e audios do YouTube.
 
