@@ -60,16 +60,7 @@ class LinkVideoBloc extends Bloc<ObjectEvent, ObjectState> {
         _initApi();
 
 
-        var link = (event as FetchEvent).link;
-//        if(!Utils.validPlayListYoutube(link)){
-//          var p = new YoutubeAPI(Vars.KEY_API,type:'youtube#playlistItem',maxResults : 25);
-//          var r = await p.search('PL_N6VL1gm0aLlr0HQ6yl2lRXdSfuxMt-s');
-//          Utils.logs('PlaysList ${r}');
-////          client = http.Client();
-////          var response = await client.get('https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=PL_N6VL1gm0aLlr0HQ6yl2lRXdSfuxMt-s&key=AIzaSyCaP-NwGuO4H9u1Y1Ly5g8b34YROBrhSII');
-////          Utils.logs('PlaysList ${response.body}');
-////          'https://www.googleapis.com/youtube/v3/playlists'
-//        }
+        var link = (event as FetchEvent).link; 
 
         TaskDownloader result = TaskDownloader();
         String query = YoutubePlayer.convertUrlToId(link);
@@ -77,18 +68,12 @@ class LinkVideoBloc extends Bloc<ObjectEvent, ObjectState> {
         var results = await api.search(query);
         ytResult = results;
         for (YT_API yt_api in ytResult) {
-          if (yt_api.id == query) {
-//            var extractor = YouTubeExtractor();
-//            var audioInfo = await extractor.getMediaStreamsAsync(yt_api.id);
+          if (yt_api.id == query) { 
             var download = TaskDownloader();
             download.idVideo = yt_api.id;
-            download.title = yt_api.title;
-//            download.linkDownload = audioInfo.audio.first.url;
-//            download.size = audioInfo.audio.first.size;
+            download.title = yt_api.title; 
             download.description = yt_api.description;
-            download.cover = yt_api.thumbnail['high']['url'];
-//            download.format = Format.mp3;
-//            download.dir_url = '${Tools.onDir()}/${download.title}.mp3';
+            download.cover = yt_api.thumbnail['high']['url']; 
             download.stateFile = DownloadTaskStatus.undefined.value;
             print('download.cover = ${download.cover}');
             result = download;
@@ -96,12 +81,7 @@ class LinkVideoBloc extends Bloc<ObjectEvent, ObjectState> {
           }
         }
         var extractor = YouTubeExtractor();
-        var media = await extractor.getMediaStreamsAsync(result.idVideo);
-
-//        client = http.Client();
-//        var response = await client.get(
-//            'http://youlink.epizy.com/?url=https://www.youtube.com/watch?v=${result.idVideo}');
-//        Utils.logs('PlaysList ${response.body}');
+        var media = await extractor.getMediaStreamsAsync(result.idVideo); 
 
         var audio = Audio(
           url: media.audio.first.url,
@@ -122,11 +102,7 @@ class LinkVideoBloc extends Bloc<ObjectEvent, ObjectState> {
           Utils.logs(' v.iTag ${ v.iTag}');
           Utils.logs(' v.Size ${Utils.formatBytes(v.size, 2)}');
           listVideos.add(video);
-          print('------------------------------------------');
-//          print('------------------------------------------');
-//          print('Size Video : ${Utils.formatBytes(v.size, 2)}');
-//          print('videoQuality : ${v.videoQuality}');
-//          print('------------------------------------------');
+          print('------------------------------------------'); 
         }
         yield VideoDetailState(downloader: result,audio: audio,videos: listVideos);
       } else {
